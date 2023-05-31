@@ -1,0 +1,137 @@
+body {
+    background: url('./Images/background.jpg');;
+    background-size: cover;
+    margin: auto;
+    font-family: "DejaVu Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+}
+.rock-paper-scissors {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: rgba(0, 0, 0, 0.72);
+    margin: 0;
+    padding: 25px 40px;
+    font-size: 40px bold;
+    color: rgb(241, 223, 214);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.instruction {
+    font-size: 23px;
+    margin-bottom: 25px;
+    color: rgb(48, 42, 42);
+    font-weight: 300;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.endResult {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: maroon;
+    font-weight: bold;
+    font-size: large;
+}
+.weapons {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(99, 5, 5);
+}
+.container,
+.record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 5px;
+    margin: 0;
+    font-size: larger;
+    color: rgb(153, 67, 67)
+}
+.options {
+    text-align: center;
+    padding-bottom: 40px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+  
+}
+.thegame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#rock {
+    background: url(./Images/rock29.jpg);
+    background-size: cover;
+    min-height: 100px;
+    min-width: 92px;
+    border-color: rgb(45, 45, 156);
+    border-radius: 8%;
+    border-width: 5px;
+}
+#paper {
+    background-image: url(./Images/paper_1_45.jpg);
+    background-size: cover;
+    min-height: 100px;
+    min-width: 92px;
+    border-color: rgb(163, 28, 28);
+    border-radius: 8%;
+    border-width: 5px;
+}
+#scissors {
+    background: url(./Images/scissors29.jpg);
+     background-size: cover;
+    min-height: 100px;
+    min-width: 92px;
+    border-color: orange;
+    border-radius: 8%;
+    border-width: 5px;
+}
+.restart {
+    min-width: 30px;
+    min-height: auto;
+    background-color: rgb(137, 214, 137);
+    font-size: 29px;
+    align-items: center;
+    border-color: green;
+    border-radius: 5%;
+    border-width: 3px;
+
+}
+.restartButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    margin-bottom: 15px;
+}
+.footer {
+    background-color: rgba(0, 0, 0, 0.72);
+    color: white; 
+    padding: 20px 0px;
+    text-align: center;
+    margin-top: auto;
+}
