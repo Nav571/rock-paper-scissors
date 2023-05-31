@@ -26,6 +26,7 @@ function playGame(e) {
     player.textContent= `Player Score : ${playerScore}`;
     computer.textContent= `Computer Score : ${computerScore}`;
     roundplay.textContent= `Rounds Played : ${roundsPlayed}`;
+    const endResult= endGame(playerScore, computerScore);   
 }
 
 function getComputerchoice() {
@@ -36,31 +37,42 @@ function getComputerchoice() {
 function playRound(playerSelection, computerSelection) {
     roundsPlayed++
     if (playerSelection===computerSelection) {
-        return ("That is a Draw!")
+        remark.textContent= 'That is a draw.';
     } else if (playerSelection==="rock" && computerSelection==="scissors") {
         playerScore++
-        return ("You win! rock beats scissors")
+        remark.textContent= "You win! Rock beats scissors";
     } else if (playerSelection==="scissors" && computerSelection==="paper") {
         playerScore++
-        return ("You win! Scissors beats paper")
+        remark.textContent= "You win! Scissors beats paper";
     } else if (playerSelection==="paper" && computerSelection==="rock") {
         playerScore++
-        return ("You win! Paper beats rock")
+        remark.textContent= "You win! Paper beats rock";
     } else if ( playerSelection==="rock" && computerSelection==="paper") {
         computerScore++
-        return ("You lose!Paper beats rock")
+        remark.textContent= "You lose! Your rock loses to paper";
     } else if (playerSelection==="paper" && computerSelection==="scissors") {
         computerScore++
-        return ("You lose! Scissors beats paper")
+        remark.textContent= "You lose! Your paper loses to scissors";
     } else if (playerSelection==="scissors" && computerSelection==="rock") {
         computerScore++
-        return ("You lose! Rock beats scissors")
+        remark.textContent= "You lose! Your scissors loses to rock";
     } else {
-        return ("its broken, you broke it...or you mistyped! try again");
-    }  
-
+        remark.textContent="its broken, you broke it";
+    }   
+           
 }
-
+function endGame(playerScore, computerScore) {
+    if (playerScore === 5 & computerScore < 5) {
+        endResult.textContent= "You did it!!! You won! How about we keep these good vibes going. Up for another game?";
+    
+    } else if (computerScore ===5 & playerScore < 5) {
+        endResult.textContent= "Sadly you lost! I'd be pissed if I lost to a computer. Try again for redemption";
+        
+    } else if (playerScore ===5 & computerScore ===5) {
+        endResult.textContent= "You earned a tie! Good try. Go again for a win";
+    }
+    
+}
 
 
 
