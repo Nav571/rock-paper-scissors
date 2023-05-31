@@ -1,3 +1,4 @@
+
 //JavaScript    Completed
 const remark= document.querySelector('.remark');
 const roundScore= document.querySelector('.roundScore');
@@ -33,7 +34,7 @@ function getComputerchoice() {
     let computerChoice = ["rock", "paper", "scissors"];
     return computerChoice [Math.floor(Math.random()*computerChoice.length)];
 }
-
+ 
 function playRound(playerSelection, computerSelection) {
     roundsPlayed++
     if (playerSelection===computerSelection) {
@@ -71,10 +72,29 @@ function endGame(playerScore, computerScore) {
     } else if (playerScore ===5 & computerScore ===5) {
         endResult.textContent= "You earned a tie! Good try. Go again for a win";
     }
-    
+    gameOver();
 }
-
-
+function gameOver () {
+    if (playerScore === 5 || computerScore === 5) {
+    btn.forEach(btn => btn.disabled= true);
+    }
+    restart.disabled=false;
+    restart.addEventListener('click', gameRestart);
+}
+function gameRestart (e) {
+    playerScore= 0;
+    computerScore= 0;
+    roundsPlayed= 0;
+    btn.forEach(btn => btn.disabled= false);
+    player.textContent= "Player Score: 0";
+    computer.textContent= "Computer Score: 0";
+    roundplay.textContent= "Rounds Played: 0";
+    remark.textContent= "Sending good vibes!"
+    roundScore.textContent= " ";
+    endResult.textContent=" ";
+    weapons.textContent= "Do you wanna play? Choose your weapon!";
+    instruction.textContent= "Classic game of Rock Paper Scissors playing against the computer.Three outcomes; you win, lose or draw. Fastest to 5 points wins. ";
+}
 
 
 
