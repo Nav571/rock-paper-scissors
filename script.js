@@ -15,14 +15,23 @@ let playerScore= 0;
 let computerScore=0;
 let roundsPlayed= 0;
 
-/*Random choice by the computer*/
+btn.forEach(choice =>choice.addEventListener('click', playGame))
+function playGame(e) {
+    const computerSelection= getComputerchoice();
+    const playerSelection= e.target.id;
+    const remark= playRound(playerSelection, computerSelection);
+    instruction.textContent= " ";
+    weapons.textContent= "Choose your weapon carefully!";
+    roundScore.textContent= `You chose ${playerSelection} and the Computer chose ${computerSelection}`;
+    player.textContent= `Player Score : ${playerScore}`;
+    computer.textContent= `Computer Score : ${computerScore}`;
+    roundplay.textContent= `Rounds Played : ${roundsPlayed}`;
+}
 
 function getComputerchoice() {
     let computerChoice = ["rock", "paper", "scissors"];
     return computerChoice [Math.floor(Math.random()*computerChoice.length)];
 }
-
-/* One round of game*/
 
 function playRound(playerSelection, computerSelection) {
     roundsPlayed++
