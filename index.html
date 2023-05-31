@@ -5,10 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
-    <h1> Rock Paper Scissors in Console</h1>
+    <div class="rock-paper-scissors">
+        <h1 class="header"> ROCK    PAPER   SCISSORS</h1>
+        <div class="description">
+            <p class="instruction"> Classic game of Rock Paper Scissors playing against the computer. 
+                Three outcomes; you win, lose or draw. Fastest to 5 points wins. 
+            </p>
+            <div class="weapons"> Do you wanna play? Choose your weapon!</div>
+        </div>
+        <div class="container"> 
+            <p class="roundScore"> </p>
+            <p class="remark" id="result">You got this! I'm rooting for you!</p>
+        </div>
+        <div class="thegame">
+            <div class= "record">
+                <p class="score" id="player-score">Player Score:</p>
+                <p class="score" id="computer-score">Computer Score:</p>
+                <p class="score" id="round">Round:</p>
+            </div>
+            <div class="options">
+                <button class="btn" id="rock"> </button>
+                <button class="btn" id="paper"></button>
+                <button class="btn" id="scissors"></button> 
+            </div>
+        </div>
+        <div>
+            <p class="endResult"> </p>
+        </div>
+        <div class="restartButton">
+        <button class="restart"> Restart</button>
+        </div>
+        
+        <div class="footer"> Created by NavR for the The Odin Project May 2023.</div>
+
+    </div>
+    <script src="script.js"></script>
+    
 
 </body>
 </html>
