@@ -12,9 +12,12 @@ const endResult= document.querySelector('.endResult');
 const weapons= document.querySelector('.weapons');
 const instruction= document.querySelector('.instruction');
 
+
 let playerScore= 0;
 let computerScore=0;
 let roundsPlayed= 0;
+
+//Added event listeners so the game starts when rock, paper or scissors is clicked
 
 btn.forEach(choice =>choice.addEventListener('click', playGame))
 function playGame(e) {
@@ -34,6 +37,7 @@ function getComputerchoice() {
     let computerChoice = ["rock", "paper", "scissors"];
     return computerChoice [Math.floor(Math.random()*computerChoice.length)];
 }
+ //function plays one round and give the necessary output
  
 function playRound(playerSelection, computerSelection) {
     roundsPlayed++
@@ -62,6 +66,8 @@ function playRound(playerSelection, computerSelection) {
     }   
            
 }
+
+//Signals the end of the game, the results and the buttons are disabled until the game restarts
 function endGame(playerScore, computerScore) {
     if (playerScore === 5 & computerScore < 5) {
         endResult.textContent= "You did it!!! You won! How about we keep these good vibes going. Up for another game?";
@@ -81,6 +87,8 @@ function gameOver () {
     restart.disabled=false;
     restart.addEventListener('click', gameRestart);
 }
+
+//Restart is clicked and the rock/paper/scissors buttons are enabled and all text goes back to it was as the start.
 function gameRestart (e) {
     playerScore= 0;
     computerScore= 0;
